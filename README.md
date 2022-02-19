@@ -1,2 +1,6 @@
 # QChem-utils
-Utility Methods for Quantum Chemistry Class
+
+This repository is intended to include utility-functions for quantum chemistry courses.
+
+
+
