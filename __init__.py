@@ -1,0 +1,1 @@
+"""Library of widely used functions in quantum chemistry for educational purposes."""
