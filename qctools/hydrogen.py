@@ -86,6 +86,6 @@ def calc_energy(n, Z=1, units='hartree'):
     elif units == 'eV':
         return E*27.2114
     elif units == 'SI':
-        return E*4.3597482e-18
+        return E*4.35974e-18
     else:
         raise ValueError("Invalid units. Must be 'hartree', 'eV', or 'SI'.")

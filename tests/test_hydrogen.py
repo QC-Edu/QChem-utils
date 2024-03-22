@@ -48,3 +48,19 @@ def test_hydrogenic_wavefunction():
     true_answer = np.array([0.+0.j, 0.+0.j, 0.+0.j, -0.+0.j, 0.00661248+0.j, 0.02022248+0.j, 0.+0.j, 0.0049428+0.j, 0.00040025+0.j, 0.01440961+0.j])
     
     np.testing.assert_allclose(res, true_answer, atol=1e-5, rtol=1e-3)
+
+def test_calc_energy():
+    """
+    testing calc_energy function
+    """
+    E_h = calc_energy(1, Z=1, units='hartree')
+    E_h_true = -0.5
+    np.testing.assert_allclose(E_h, E_h_true, rtol=1e-5, atol=1e-5)
+
+    E_ev = calc_energy(1, Z=1, units='eV')
+    E_ev_true = -13.605693009
+    np.testing.assert_allclose(E_ev, E_ev_true, rtol=1e-5, atol=1e-5)
+
+    E_h = calc_energy(2, Z=1, units='SI')
+    E_h_true = -2.18e-18
+    np.testing.assert_allclose(E_h, E_h_true, rtol=1e-5, atol=1e-5)
