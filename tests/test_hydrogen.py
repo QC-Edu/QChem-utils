@@ -1,4 +1,4 @@
-from hydrogen import *
+from qctools.hydrogen import *
 import numpy as np
 
 def test_radial():
