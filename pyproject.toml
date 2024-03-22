@@ -1,17 +1,18 @@
 [build-system]
 requires = ["setuptools", "wheel"]
 
-[tool]
+[project]
 name = "qcedu-tools"
 version = "0.1.0"
 description = "A Python package for quantum chemistry; educational purposes."
 authors = [
   { name="QC-Devs Community", email="qcdevs@gmail.com"},
 ]
+dependencies = [
+    "numpy>=1.16",
+    "pytest >=2.6",
+    "scipy>=1.4",
+]
 
-[dependencies]
-python = "^3.7"
-scipy = "^1.4"
-numpy = "^1.16"
 [dev-dependencies]
 pytest = "^2.6"
