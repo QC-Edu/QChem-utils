@@ -61,3 +61,31 @@ def hydrogenic_wavefunction(r, theta, phi, n, l, m, Z=2):
         The value of the hydrogenic wavefunction at given r, theta, and phi.
     """
     return radial(r, n, l, Z)*special.sph_harm(m, l, phi, theta)
+
+def calc_energy(n, Z=1, units='hartree'):
+    """
+    Compute the energy of a hydrogenic orbital.
+
+    Parameters
+    ----------
+    n : int
+        The principal quantum number.
+    Z : int
+        The atomic number.
+    units : str
+        The units of energy to return. Either 'hartree' or 'eV'.
+
+    Returns
+    -------
+    float
+        The energy of the hydrogenic orbital in the specified units.
+    """
+    E = -Z**2/(2*n**2)
+    if units == 'hartree':
+        return E
+    elif units == 'eV':
+        return E*27.2114
+    elif units == 'SI':
+        return E*4.3597482e-18
+    else:
+        raise ValueError("Invalid units. Must be 'hartree', 'eV', or 'SI'.")
