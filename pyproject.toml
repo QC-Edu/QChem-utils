@@ -2,7 +2,7 @@
 requires = ["setuptools", "wheel"]
 
 [project]
-name = "qcedu-tools"
+name = "qctools"
 version = "0.1.0"
 description = "A Python package for quantum chemistry; educational purposes."
 authors = [
